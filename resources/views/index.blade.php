@@ -3,20 +3,7 @@
 
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
+            
 
            <section id="slider"><!--slider-->
         <div class="container">
@@ -31,11 +18,26 @@
 
                         <div class="carousel-inner">
                              @foreach($banners as $key => $banner)
-                                <div class="item @if($key ==0) active @endif">
+                                <!-- <div class="item @if($key ==0) active @endif">
                                 <a href="{{$banner->link}}" title="Banner_1">
                                     <img src="/images/frontend_images/banners/{{ $banner->image }}" style="width:250px;">
-                                    </a>
+                                    </a> -->
                     <!-- src="{{ asset('/images/frontend_images/banners/'.$banner->image) }}" -->
+                                <!-- </div> -->
+                                <div class="item @if($key ==0) active @endif">
+                                    <div class="col-sm-6">
+                                        <h1><span>E</span>-SHOPPER</h1>
+                                        <h2>100% Responsive Design</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                        <button type="button" class="btn btn-default get">
+                                            <a href="{{$banner->link}}" title="Banner_1">Get it now</a>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <!-- <img src="/images/frontend_images/home/girl2.jpg" class="girl img-responsive" alt="" /> -->
+                                        <img src="/images/frontend_images/banners/{{ $banner->image }}" class="girl img-responsive" style="width: 484px;height: 441px;">
+                                        <!-- <img src="/images/frontend_images/home/pricing.png"  class="pricing" alt="" /> -->
+                                    </div>
                                 </div>
                             @endforeach
 
