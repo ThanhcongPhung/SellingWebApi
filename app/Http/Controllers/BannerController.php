@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\BannerServiceInterface;
 use App\Http\Requests\BannerRequest;
 use App\Http\Resources\Banner\BannerCollection;
 use App\Http\Resources\Banner\BannerResource;
@@ -14,10 +15,12 @@ use Image;
 class BannerController extends Controller
 {
 
-
-    // public function __construct()
+    // protected $bannerService;
+    // public function __construct(BannerServiceInterface $bannerService)
     // {
-    //     $this->middleware('auth:api')->except('index','show');
+    //     $this->bannerService=$bannerService;
+    //     // $this->middleware('auth:api')->except('index','show');
+
     // }
     /**
      * Display a listing of the resource.

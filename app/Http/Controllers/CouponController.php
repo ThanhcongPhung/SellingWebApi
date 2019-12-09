@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\CouponServiceInterface;
 use App\Http\Requests\CouponRequest;
 use App\Http\Resources\Coupon\CouponCollection;
 use App\Http\Resources\Coupon\CouponResource;
@@ -14,10 +15,13 @@ class CouponController extends Controller
 
 
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:api')->except('index','show');
-    // }
+    protected $couponService;
+        // public function __construct(CouponServiceInterface $couponService)
+        // {
+        //     $this->couponService=$couponService;
+        //     // $this->middleware('auth:api')->except('index','show');
+
+        // }
     /**
      * Display a listing of the resource.
      *
