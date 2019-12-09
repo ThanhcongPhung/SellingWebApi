@@ -15,13 +15,13 @@ use Image;
 class BannerController extends Controller
 {
 
-    // protected $bannerService;
-    // public function __construct(BannerServiceInterface $bannerService)
-    // {
-    //     $this->bannerService=$bannerService;
-    //     // $this->middleware('auth:api')->except('index','show');
+        protected $bannerService;
+        // public function __construct(BannerServiceInterface $bannerService)
+        // {
+        //     $this->bannerService=$bannerService;
+        //     // $this->middleware('auth:api')->except('index','show');
 
-    // }
+        // }
     /**
      * Display a listing of the resource.
      *
