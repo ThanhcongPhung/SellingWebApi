@@ -36,7 +36,7 @@ class BannerController extends Controller
         //     // $banner->image = str_replace("\/","/",$banner->image);
         //     $banner->image = stripcslashes($banner->image);
         // }
-        return json_encode($banners, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        return json_encode(BannerCollection::collection($banners), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
         // return $banners;
     }
 
