@@ -29,7 +29,15 @@ class BannerController extends Controller
      */
     public function index()
     {
-        return BannerCollection::collection(Banner::all());
+        // return BannerCollection::collection(Banner::all());
+        $banners = Banner::all();
+        // foreach($banners as $banner) {
+        //     // $banner->image = json_decode($banner->image);
+        //     // $banner->image = str_replace("\/","/",$banner->image);
+        //     $banner->image = stripcslashes($banner->image);
+        // }
+        return json_encode($banners, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        // return $banners;
     }
 
     /**
